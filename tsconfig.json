@@ -20,7 +20,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@cpns/*": [
+        "src/components/*"
+      ]
+    }
   },
   "include": [
     "src"
@@ -29,14 +38,5 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "baseUrl": ".",
-  "paths": {
-    "@/*": [
-      "src/*"
-    ],
-    "@cpn/*": [
-      "src/components"
-    ]
-  }
+  ]
 }

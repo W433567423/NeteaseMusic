@@ -1,10 +1,17 @@
 import {memo} from "react";
 
+import TuAppHeader from "./components/app-header";
+import TuAppFooter from "./components/app-footer";
+import DefineRouter from "@/router";
+import {BrowserRouter} from "react-router-dom";
+
 const App = memo(() => {
     return (
-        <div>
-            <h2>App</h2>
-        </div>
+        <BrowserRouter>
+            <TuAppHeader/>
+            <DefineRouter/>
+            <TuAppFooter/>
+        </BrowserRouter>
     )
 })
 

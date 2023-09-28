@@ -9,7 +9,7 @@ export default defineConfig({
         // 配置路径别名
         alias: {
             '@': path.resolve(__dirname, './src'),
-            '@cpn': path.resolve(__dirname, './src/components'),
+            '@cpns': path.resolve(__dirname, './src/components'),
         },
     },
 })
