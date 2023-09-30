@@ -3,7 +3,7 @@ import {memo} from "react";
 const TuDiscover = memo(() => {
     return (
         <>
-            <h2 style={{width: "200px", height: "300px", backgroundColor: "red"}}>TuDiscover</h2>
+            <h2 style={{height: "100px", backgroundColor: "red"}}>TuDiscover</h2>
         </>
     )
 })
