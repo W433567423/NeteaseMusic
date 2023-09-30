@@ -18,6 +18,7 @@ if  "%commit%" == "" (set "commit=提交缓冲区文件")
 @echo %ESC_CHAR%[38;5;2m开始执行脚本%ESC_CHAR%[m
 @echo %ESC_CHAR%[38;5;226m将文件添加到缓冲区...%ESC_CHAR%[m
 @echo %ESC_CHAR%[38;5;3m^>git add . ing...%ESC_CHAR%[m
+%gitPath% checkout powo
 %gitPath% add . >nul
 
 @echo.
