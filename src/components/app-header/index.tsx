@@ -3,6 +3,8 @@ import {HeaderLeft, HeaderRight, HeaderWrapper} from "@cpns/app-header/style.ts"
 import {headerLinks} from "@/common/local-data.ts";
 import {NavLink} from "react-router-dom";
 import {ILocalRelation} from "@/common/type.ts";
+import {Input} from "antd";
+import {SearchOutlined} from "@ant-design/icons";
 
 const TuAppHeader = memo(() => {
     const showSelectItem = (e: ILocalRelation, i: number) => {
@@ -24,20 +26,13 @@ const TuAppHeader = memo(() => {
                         })}
                     </div>
                 </HeaderLeft>
-                <HeaderRight>right</HeaderRight>
-                {/*<button style={buttonCss}*/}
-                {/*        onClick={() => router('/')}>discover*/}
-                {/*</button>*/}
-                {/*<button style={buttonCss}*/}
-                {/*        onClick={() => router('/friend')}>friend*/}
-                {/*</button>*/}
-                {/*<button style={buttonCss}*/}
-                {/*        onClick={() => router('/mine')}>mine*/}
-                {/*</button>*/}
 
-                {/*<NavLink style={{padding: '4px'}} to="/">discover</NavLink>*/}
-                {/*<NavLink style={{padding: '4px'}} to="/friend">friend</NavLink>*/}
-                {/*<NavLink style={{padding: '4px'}} to="/mine">mine</NavLink>*/}</div>
+                <HeaderRight>
+                    <Input className="search" placeholder="音乐/视频/电台/用户" prefix={<SearchOutlined/>}/>
+                    <button className="center">创作者中心</button>
+                    <button className="login">登录</button>
+                </HeaderRight>
+            </div>
             <div className="divider"></div>
         </HeaderWrapper>
     )
