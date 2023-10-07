@@ -67,7 +67,7 @@ export const footerImages: ILocalFooterImg[] = [
 ]
 
 // discover中的数据
-export const dicoverMenu: ILocalRelation[] = [
+export const discoverMenu: ILocalRelation[] = [
     {
         title: "推荐",
         link: "/recommend"
