@@ -20,6 +20,7 @@ const TuDiscover = memo(() => {
                     }
                 </TopMenu>
             </div>
+            {/*子路由对应位置*/}
             <Outlet/>
         </DiscoverWrapper>
     )
