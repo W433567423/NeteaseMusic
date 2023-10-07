@@ -1,15 +1,10 @@
 import {memo} from "react";
 import {DiscoverWrapper, TopMenu} from "@/pages/discover/style.ts";
 import {discoverMenu} from "@/common/local-data.ts";
-import {NavLink} from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 
-interface IPropsType {
-    route: any
-}
 
-const TuDiscover = memo((props: IPropsType) => {
-    const {route} = props;
-    console.log('aaaaaa', route)
+const TuDiscover = memo(() => {
     return (
         <DiscoverWrapper>
             <div className="top">
@@ -25,7 +20,7 @@ const TuDiscover = memo((props: IPropsType) => {
                     }
                 </TopMenu>
             </div>
-            {/*{(route.routes)}*/}
+            <Outlet/>
         </DiscoverWrapper>
     )
 })
