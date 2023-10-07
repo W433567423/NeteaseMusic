@@ -96,7 +96,7 @@ export const HeaderRight = styled.div`
 
   .center, .login {
     background-color: unset;
-    color: #f5f5f5;
+    color: #787878;
     cursor: pointer;
   }
 
@@ -108,6 +108,6 @@ export const HeaderRight = styled.div`
     border: 1px solid #666;
     border-radius: 16px;
     margin: 0 16px;
+    color: #fff;
   }
-
 `
