@@ -2,7 +2,7 @@ import {memo, useEffect} from "react";
 import {DiscoverWrapper, TopMenu} from "@/pages/discover/style.ts";
 import {discoverMenu} from "@/common/local-data.ts";
 import {NavLink, Outlet} from "react-router-dom";
-import request from "@/service/request.ts";
+import request from "@/services/request.ts";
 
 
 const TuDiscover = memo(() => {

@@ -1,5 +1,5 @@
 import originAxios from 'axios';
-import {BASE_URL} from "@/service/config.ts";
+import {BASE_URL} from "@/services/config.ts";
 
 const request = (option: any) => {
     return new Promise((resolve, reject) => {
