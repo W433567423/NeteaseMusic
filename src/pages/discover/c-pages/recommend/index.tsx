@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 
 const TURecommend = memo(() => {
-    const {topBanners} = useSelector((state: any) => ({topBanners: state.get('recommend').topBanners}))
+    const {topBanners} = useSelector((state: any) => ({topBanners: state.get('recommend').get('topBanners')}))
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getBannerAction() as any)
