@@ -8,7 +8,7 @@ interface IBannerWrapperType {
 }
 
 export const BannerWrapper = styled.div<IBannerWrapperType>`
-    // background: url(${props => props.$bgImg}) center center/6000px;
+  background: url(${props => props.$bgImg}) center center/6000px;
 
   .banner {
     height: 270px;
