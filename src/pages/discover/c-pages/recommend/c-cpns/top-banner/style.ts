@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import downloadImg from '@/assets/img/download.png'
 import bannerSpriteImg from '@/assets/img/banner_sprite.png'
 
-export const BannerWrapper = styled.div`
-  background: url(${props => (props as any).bgImage}) center center/6000px;
+interface IBannerWrapper {
+    bgImage: string;
+}
+
+export const BannerWrapper = styled.div<IBannerWrapper>`
+  background: url(${props => props.bgImage}) center center/6000px;
 
   .banner {
     height: 270px;
