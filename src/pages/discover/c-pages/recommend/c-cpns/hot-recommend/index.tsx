@@ -6,11 +6,13 @@
  */
 import {memo} from "react";
 import {HotRecommendWrapper} from "@/pages/discover/c-pages/recommend/c-cpns/hot-recommend/style.ts";
+import TUThemeHeaderRCM from "@cpns/sheme-header-rcm";
 
 const TUHotRecommend = memo(() => {
     return (
         <HotRecommendWrapper>
-            <h2> TUHotRecommend</h2>
+            <TUThemeHeaderRCM title='热门推荐' moreLink="" keywords={['华语', '流行', '摇滚', '民谣', '电子']}
+                              keywordClick={(a: string) => console.log(a)}/>
         </HotRecommendWrapper>
     )
 })
