@@ -4,14 +4,17 @@ import TuAppHeader from "./components/app-header";
 import TuAppFooter from "./components/app-footer";
 import TuRouter from "@/router";
 import {HashRouter} from "react-router-dom";
+import {Provider} from "react-redux";
+import store from "@/store";
 
 const App = memo(() => {
     return (
-        <HashRouter>
-            <TuAppHeader/>
-            <TuRouter/>
-            <TuAppFooter/>
-        </HashRouter>
+        <Provider store={store}>
+            <HashRouter>
+                <TuAppHeader/>
+                <TuRouter/>
+                <TuAppFooter/>
+            </HashRouter></Provider>
     )
 })
 
