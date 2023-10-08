@@ -1,6 +1,7 @@
 import * as actionTypes from './constants';
 import {Map} from "immutable";
 
+//Immutable类型优化性能
 const defaultState = Map({
     topBanners: [],
     hotRecommends: [],

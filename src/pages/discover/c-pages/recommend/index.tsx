@@ -3,11 +3,16 @@ import {useDispatch, useSelector} from "react-redux";
 import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 
 const TURecommend = memo(() => {
-    const {topBanners} = useSelector((state: any) => ({topBanners: state.get('recommend').get('topBanners')}))
+    // redux hooks
+    const {topBanners} = useSelector((state: any) => ({topBanners: state.getIn(['recommend', 'topBanners'])}))
+    //getIn() === get().get()
     const dispatch = useDispatch()
+
     useEffect(() => {
+        // DONE 去获取轮播图数据
         dispatch(getBannerAction() as any)
     }, [dispatch]);
+
     return (
         <>
             <h2>
