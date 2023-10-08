@@ -1,11 +1,18 @@
 import {memo} from "react";
 import TUTopBanner from "@/pages/discover/c-pages/recommend/c-cpns/top-banner";
-import {RecommendWraper} from "@/pages/discover/c-pages/recommend/style.ts";
+import {Content, RecommendLeft, RecommendRight, RecommendWraper} from "@/pages/discover/c-pages/recommend/style.ts";
+import TUHotRecommend from "@/pages/discover/c-pages/recommend/c-cpns/hot-recommend";
 
 const TURecommend = memo(() => {
     return (
         <RecommendWraper>
             <TUTopBanner/>
+            <Content className="wrap-v2">
+                <RecommendLeft>
+                    <TUHotRecommend></TUHotRecommend>
+                </RecommendLeft>
+                <RecommendRight></RecommendRight>
+            </Content>
         </RecommendWraper>
     )
 })
