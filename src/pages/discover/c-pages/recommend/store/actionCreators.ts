@@ -39,9 +39,10 @@ const changeSettleSingsAction = (res: any) => ({
 
 
 // 获取轮播图数据
-export const getBanner = () => {
-    return (dispatch: (arg0: { type: string; banners: any; }) => void) => {
+export const getBannerAction = () => {
+    return (dispatch: any) => {
         getTopBanner().then((res: any) => {
+            console.log(9999999999, res)
             dispatch(changeBannerAction(res));
         })
     }

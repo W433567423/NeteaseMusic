@@ -1,12 +1,24 @@
-import {memo} from "react";
+import {memo, useEffect} from "react";
+import {connect} from "react-redux";
+import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 
-const TURecommend = memo(() => {
-    
+const TURecommend = (props: any) => {
+    const {getBanners, topBanners} = props
+    useEffect(() => {
+        getBanners()
+    }, []);
     return (
         <>
-            TURecommend
+            <h2>
+                TURecommend:{topBanners}</h2>
         </>
     )
-})
+}
 
-export default TURecommend
+const mapStateToProps = (state: any) => ({
+    topBanners: state.recommend.topBanners
+})
+const mapDispatchToProps = (dispatch: any) => ({
+    getBanners: () => dispatch(getBannerAction())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(memo(TURecommend))

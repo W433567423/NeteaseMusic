@@ -1,5 +1,6 @@
 import request from "./request";
 
+// 获取头部banner图片
 export function getTopBanner() {
     return request({
         url: "/banner"
