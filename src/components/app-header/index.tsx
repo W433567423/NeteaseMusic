@@ -1,5 +1,5 @@
 import {memo} from "react";
-import {HeaderLeft, HeaderRight, HeaderWrapper} from "@cpns/app-header/style.ts";
+import {HeaderLeft, HeaderRight, HeaderWrapper} from "@cpn/app-header/style.ts";
 import {headerLinks} from "@/common/local-data.ts";
 import {NavLink} from "react-router-dom";
 import {ILocalRelation} from "@/common/type.ts";

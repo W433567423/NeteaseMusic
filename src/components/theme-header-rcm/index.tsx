@@ -13,7 +13,7 @@ interface ITUThemeHeaderRCMType {
     keywords?: string[]
     title: string,
     moreLink: string
-    keywordClick: (a: string) => void
+    keywordClick?: (a: string) => void
 }
 
 const TUThemeHeaderRCM = memo((props: ITUThemeHeaderRCMType) => {
@@ -28,7 +28,8 @@ const TUThemeHeaderRCM = memo((props: ITUThemeHeaderRCMType) => {
                         keywords?.map((item, index) => {
                             return (
                                 <div className="item" key={item}>
-                                    <span className="link" onClick={() => keywordClick(item)}>{item}</span>
+                                    <span className="link"
+                                          onClick={() => keywordClick && keywordClick(item)}>{item}</span>
                                     {index !== keywords?.length - 1 && <span className="divider">|</span>}
                                 </div>
                             )

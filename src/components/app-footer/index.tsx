@@ -1,5 +1,5 @@
 import {Fragment, memo} from "react";
-import {AppFooterWrapper, FooterLeft, FooterRight} from "@cpns/app-footer/style.ts";
+import {AppFooterWrapper, FooterLeft, FooterRight} from "@cpn/app-footer/style.ts";
 import {footerImages, footerLinks} from "@/common/local-data.ts";
 
 const TuAppFooter = memo(() => {

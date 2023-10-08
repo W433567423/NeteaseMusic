@@ -2,6 +2,7 @@ import {memo} from "react";
 import TUTopBanner from "@/pages/discover/c-pages/recommend/c-cpns/top-banner";
 import {Content, RecommendLeft, RecommendRight, RecommendWraper} from "@/pages/discover/c-pages/recommend/style.ts";
 import TUHotRecommend from "@/pages/discover/c-pages/recommend/c-cpns/hot-recommend";
+import TUNewAlbum from "@/pages/discover/c-pages/recommend/c-cpns/new-album";
 
 const TURecommend = memo(() => {
     return (
@@ -10,6 +11,7 @@ const TURecommend = memo(() => {
             <Content className="wrap-v2">
                 <RecommendLeft>
                     <TUHotRecommend></TUHotRecommend>
+                    <TUNewAlbum></TUNewAlbum>
                 </RecommendLeft>
                 <RecommendRight></RecommendRight>
             </Content>
