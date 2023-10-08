@@ -9,6 +9,7 @@ import {BannerLeft, BannerRight, BannerWrapper} from "@/pages/discover/c-pages/r
 import {useDispatch, useSelector} from "react-redux";
 import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 import {Carousel} from "antd";
+import {ITopBannerType} from "@/services/type.ts";
 
 const TUTopBanner = memo(() => {
     // redux hooks
@@ -27,7 +28,7 @@ const TUTopBanner = memo(() => {
                 <BannerLeft>
                     <Carousel effect="fade" autoplay>
                         {
-                            topBanners.map((item: any) => {
+                            (topBanners as ITopBannerType[]).map((item) => {
                                 return (
                                     <div className="banner-item" key={item.imageUrl}>
                                         <img className="image" src={item.imageUrl} alt={item.typeTitle}/>
