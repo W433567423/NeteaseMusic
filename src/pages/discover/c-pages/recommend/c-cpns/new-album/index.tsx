@@ -1,3 +1,9 @@
+/**
+ * TODO
+ * @description: discover-新碟上映组件
+ * @author: tutu
+ * @time: 2023/10/8 19:42
+ */
 import {memo} from 'react';
 import HYThemeHeaderRCM from '@cpn/theme-header-rcm';
 // import HYAlbumCover from "@/components/album-cover";
