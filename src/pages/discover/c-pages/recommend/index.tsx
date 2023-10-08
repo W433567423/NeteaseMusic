@@ -1,24 +1,12 @@
-import {memo, useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
+import {memo} from "react";
+import TUTopBanner from "@/pages/discover/c-pages/recommend/c-cpns/top-banner";
+import {RecommendWraper} from "@/pages/discover/c-pages/recommend/style.ts";
 
 const TURecommend = memo(() => {
-    // redux hooks
-    const {topBanners} = useSelector((state: any) => ({topBanners: state.getIn(['recommend', 'topBanners'])}))
-    //getIn() === get().get()
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        // DONE 去获取轮播图数据
-        dispatch(getBannerAction() as any)
-    }, [dispatch]);
-
     return (
-        <>
-            <h2>
-                TURecommend:{topBanners.length}
-            </h2>
-        </>
+        <RecommendWraper>
+            <TUTopBanner/>
+        </RecommendWraper>
     )
 })
 
