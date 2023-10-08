@@ -15,8 +15,7 @@ const defaultState = Map({
 export default (state = defaultState, action: { type: any; banners: never[]; recommends: never[]; newAlbum: never[]; topUpList: {}; topNewList: {}; topOriginList: {}; settleSings: never[]; }) => {
     switch (action.type) {
         case actionTypes.CHANGE_TOP_BNNAER:
-            return {...state, topBanners: action.banners}
-        // return state.set("topBanners", action.banners);
+            return state.set("topBanners", action.banners);
         case actionTypes.CHANGE_HOT_RECOMMEND:
             return state.set("hotRecommends", action.recommends);
         case actionTypes.CHANGE_NEW_ALBUM:

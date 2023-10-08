@@ -42,7 +42,6 @@ const changeSettleSingsAction = (res: any) => ({
 export const getBannerAction = () => {
     return (dispatch: any) => {
         getTopBanner().then((res: any) => {
-            console.log(9999999999, res)
             dispatch(changeBannerAction(res));
         })
     }
