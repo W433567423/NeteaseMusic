@@ -16,7 +16,8 @@ const TUHotRecommend = memo(() => {
     }, [navigate]);
     return (
         <HotRecommendWrapper>
-            <TUThemeHeaderRCM title='热门推荐' moreLink="" keywords={['华语', '流行', '摇滚', '民谣', '电子']}
+            <TUThemeHeaderRCM title='热门推荐' moreLink="/discover/songs"
+                              keywords={['华语', '流行', '摇滚', '民谣', '电子']}
                               keywordClick={keywordClick}/>
         </HotRecommendWrapper>
     )

@@ -3,6 +3,7 @@ import TUTopBanner from "@/pages/discover/c-pages/recommend/c-cpns/top-banner";
 import {Content, RecommendLeft, RecommendRight, RecommendWraper} from "@/pages/discover/c-pages/recommend/style.ts";
 import TUHotRecommend from "@/pages/discover/c-pages/recommend/c-cpns/hot-recommend";
 import TUNewAlbum from "@/pages/discover/c-pages/recommend/c-cpns/new-album";
+import TURankingList from "@/pages/discover/c-pages/recommend/c-cpns/ranking-list";
 
 const TURecommend = memo(() => {
     return (
@@ -10,8 +11,9 @@ const TURecommend = memo(() => {
             <TUTopBanner/>
             <Content className="wrap-v2">
                 <RecommendLeft>
-                    <TUHotRecommend></TUHotRecommend>
-                    <TUNewAlbum></TUNewAlbum>
+                    <TUHotRecommend/>
+                    <TUNewAlbum/>
+                    <TURankingList/>
                 </RecommendLeft>
                 <RecommendRight></RecommendRight>
             </Content>
