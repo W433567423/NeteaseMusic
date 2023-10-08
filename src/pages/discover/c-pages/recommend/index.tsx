@@ -3,19 +3,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 
 const TURecommend = memo(() => {
-    // const {getBanners, topBanners} = props
-    const {topBanners} = useSelector((state: any) => ({topBanners: state.recommend}))
-    console.log(topBanners)
+    const {topBanners} = useSelector((state: any) => ({topBanners: state.get('recommend').topBanners}))
     const dispatch = useDispatch()
     useEffect(() => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        dispatch(getBannerAction())
+        dispatch(getBannerAction() as any)
     }, [dispatch]);
     return (
         <>
             <h2>
-                TURecommend:
+                TURecommend:{topBanners.length}
             </h2>
         </>
     )
