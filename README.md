@@ -18,6 +18,8 @@
 - 修改数据:set
 - 获取数据:get
 
+> getIn() === get().get()
+
 #### 集合redux
 
 - 使用redux-immutable中的combineReducers
