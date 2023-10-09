@@ -20,6 +20,7 @@ const changeNewAlbumAction = (res: any) => ({
     newAlbum: res.albums
 })
 
+// 修改redux中的topUpList数据
 const changeUpListAction = (res: any) => ({
     type: actionTypes.CHANGE_UP_LIST,
     topUpList: res.playlist
@@ -67,6 +68,7 @@ export const getAlbum = (limit: number = 10, offset: number = 0) => {
     }
 }
 
+// 获取榜单数据
 export const getTopData = (idx: number) => {
     return (dispatch: (arg0: { type: string; topNewList?: any; topOriginList?: any; topUpList?: any; }) => void) => {
         getTopList(idx).then((res: any) => {

@@ -20,7 +20,7 @@ const TUSongsCover = memo((props: IPropsType) => {
     return (
         <ThemeCoverWrapper right={right}>
             <div className="cover-top"
-                 onClick={() => window.location.href = `https://music.163.com/#/playlist?id=${info.id}`}>
+                 onClick={() => window.location.href = 'todo'}>
                 <img src={getSizeImage(info.picUrl || info.coverImgUrl || '', 140)} alt=""/>
                 <div className="cover sprite_covor">
                     <div className="info sprite_covor">

@@ -6,6 +6,7 @@ export const RankingWrapper = styled.div`
     margin: 30px 0;
     display: flex;
     background-image: url(${recommendTopBgImg});
+    background-size: 698px 472px;
     height: 472px;
   }
 `

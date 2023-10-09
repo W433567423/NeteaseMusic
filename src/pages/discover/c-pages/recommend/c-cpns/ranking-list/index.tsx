@@ -4,14 +4,38 @@
  * @author: tutu
  * @time: 2023/10/8 19:45
  */
-import {memo} from "react";
+import {memo, useEffect} from "react";
 import HYThemeHeaderRCM from "@cpn/theme-header-rcm";
 import {RankingWrapper} from "@/pages/discover/c-pages/recommend/c-cpns/ranking-list/style.ts";
+import {shallowEqual, useDispatch, useSelector} from "react-redux";
+import {getTopData} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
+import TUTopRanking from "@cpn/top-ranking";
+import {ITopListType} from "@/pages/discover/c-pages/recommend/c-cpns/ranking-list/type.ts";
 
-const TURankingList = memo(() => {
+const TURankingList = memo(() => { // redux
+    const dispatch = useDispatch();
+    const {topUpList, topNewList, topOriginList}: { topUpList: ITopListType, topNewList: ITopListType, topOriginList: ITopListType } = useSelector((state: any) => ({
+        topUpList: state.getIn(["recommend", "topUpList"]),
+        topNewList: state.getIn(["recommend", "topNewList"]),
+        topOriginList: state.getIn(["recommend", "topOriginList"])
+    }), shallowEqual);
+    console.log(topUpList, topNewList, topOriginList)
+
+    // hooks
+    useEffect(() => {
+        dispatch(getTopData(19723756) as any);
+        dispatch(getTopData(3779629) as any);
+        dispatch(getTopData(2884035) as any);
+    }, [dispatch])
+
     return (
         <RankingWrapper>
-            <HYThemeHeaderRCM title="榜单" moreLink="/discover/album"/>
+            <HYThemeHeaderRCM title="榜单" moreLink="/discover/ranking"/>
+            <div className="tops">
+                <TUTopRanking info={topUpList}/>
+                <TUTopRanking info={topNewList}/>
+                <TUTopRanking info={topOriginList}/>
+            </div>
         </RankingWrapper>
     )
 })

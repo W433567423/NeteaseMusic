@@ -27,9 +27,9 @@ const TUAlbumCover = memo((props: IPropsType) => {
             </div>
             <div className="album-info">
                 <div className="name"
-                     onClick={() => window.location.href = `https://music.163.com/#/album?id=${info.id}`}>{info.name}</div>
+                     onClick={() => window.location.href = `todo`}>{info.name}</div>
                 <div className="artist"
-                     onClick={() => window.location.href = `https://music.163.com/#/artist?id=${info.artist.id}`}>{info.artist.name}</div>
+                     onClick={() => window.location.href = `todo`}>{info.artist.name}</div>
             </div>
         </AlbumWrapper>
     )
