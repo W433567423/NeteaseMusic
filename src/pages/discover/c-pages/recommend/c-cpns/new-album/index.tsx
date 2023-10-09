@@ -13,6 +13,7 @@ import {getAlbum} from "@/pages/discover/c-pages/recommend/store/actionCreators.
 import {Carousel} from "antd";
 import {CarouselRef} from "antd/es/carousel";
 import {INewAlbumType} from "./type.ts";
+import TUAlbumCover from "@cpn/album-cover";
 
 const TUNewAlbum = memo(() => {
     // redux
@@ -42,8 +43,7 @@ const TUNewAlbum = memo(() => {
                                         {
                                             newAlbum.slice(item * 5, (item + 1) * 5).map(item => {
                                                 return (
-                                                    <div key={item.id}></div>
-                                                    // <HYAlbumCover key={item.id} info={item}/>
+                                                    <TUAlbumCover key={item.id} info={item}/>
                                                 )
                                             })
                                         }

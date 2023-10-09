@@ -47,4 +47,4 @@ interface INewAlbumType {
     type: string
 }
 
-export type {INewAlbumType}
+export type {IArtistType, INewAlbumType}
