@@ -79,10 +79,10 @@ export const TopRankingWrapper = styled.div`
         }
 
         .operate {
-          display: flex;
           align-items: center;
           display: none;
           width: 82px;
+          background-color: red;
 
           .btn {
             width: 17px;
