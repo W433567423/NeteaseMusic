@@ -5,12 +5,7 @@
  * @time: 2023/10/8 16:46
  */
 import {memo, useCallback, useEffect, useRef, useState} from "react";
-import {
-    BannerControl,
-    BannerLeft,
-    BannerRight,
-    BannerWrapper
-} from "@/pages/discover/c-pages/recommend/c-cpns/top-banner/style.ts";
+import {BannerControl, BannerLeft, BannerRight, BannerWrapper} from "./style.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 import {Carousel} from "antd";

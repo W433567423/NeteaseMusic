@@ -5,7 +5,7 @@
  * @time: 2023/10/8 18:56
  */
 import {memo, useCallback, useEffect} from "react";
-import {HotRecommendWrapper} from "@/pages/discover/c-pages/recommend/c-cpns/hot-recommend/style.ts";
+import {HotRecommendWrapper} from "./style.ts";
 import TUThemeHeaderRCM from "@cpn/theme-header-rcm";
 import {useNavigate} from "react-router-dom";
 import {getRecommend} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";

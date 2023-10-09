@@ -6,7 +6,7 @@
  */
 import {memo, useEffect} from "react";
 import TUThemeHeaderRCM from "@cpn/theme-header-rcm";
-import {RankingWrapper} from "@/pages/discover/c-pages/recommend/c-cpns/ranking-list/style.ts";
+import {RankingWrapper} from "./style.ts";
 import {shallowEqual, useDispatch, useSelector} from "react-redux";
 import {getTopData} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 import TUTopRanking from "@cpn/top-ranking";

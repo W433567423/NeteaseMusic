@@ -1,9 +1,11 @@
 import {memo} from "react";
 import TUTopBanner from "@/pages/discover/c-pages/recommend/c-cpns/top-banner";
-import {Content, RecommendLeft, RecommendRight, RecommendWraper} from "@/pages/discover/c-pages/recommend/style.ts";
+import {Content, RecommendLeft, RecommendRight, RecommendWraper} from "./style.ts";
 import TUHotRecommend from "@/pages/discover/c-pages/recommend/c-cpns/hot-recommend";
 import TUNewAlbum from "@/pages/discover/c-pages/recommend/c-cpns/new-album";
 import TURankingList from "@/pages/discover/c-pages/recommend/c-cpns/ranking-list";
+import TUUserLogin from "@/pages/discover/c-pages/recommend/c-cpns/user-login";
+import TUSettleSinger from "@/pages/discover/c-pages/recommend/c-cpns/settle-singer";
 
 const TURecommend = memo(() => {
     return (
@@ -15,7 +17,10 @@ const TURecommend = memo(() => {
                     <TUNewAlbum/>
                     <TURankingList/>
                 </RecommendLeft>
-                <RecommendRight></RecommendRight>
+                <RecommendRight>
+                    <TUUserLogin/>
+                    <TUSettleSinger/>
+                </RecommendRight>
             </Content>
         </RecommendWraper>
     )
