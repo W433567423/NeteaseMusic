@@ -30,7 +30,7 @@ const TUSettleSinger = memo(() => {
                 {
                     settleSings.map((item) => {
                         return (
-                            <a href="/singer" key={item.id} className="item">
+                            <a href="#/singer" key={item.id} className="item">
                                 <img src={getSizeImage(item.img1v1Url, 62)} alt=""/>
                                 <div className="info">
                                     <div className="title">{item.alias.join("") || item.name}</div>
@@ -42,7 +42,7 @@ const TUSettleSinger = memo(() => {
                 }
             </div>
             <div className="apply-for">
-                <a href="/abc">申请成为网易音乐人</a>
+                <a href="#/abc">申请成为网易音乐人</a>
             </div>
         </SetterSongerWrapper>
     )

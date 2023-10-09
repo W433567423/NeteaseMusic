@@ -1,6 +1,6 @@
 /**
  * DONE
- * @description: 默认组件
+ * @description: 小头部组件
  * @author: tutu
  * @time: 2023/10/9 15:33
  */
@@ -17,7 +17,7 @@ const TUThemeHeaderSmall = memo((props: IPropsType) => {
     return (
         <HeaderWrapper>
             <h3>{title}</h3>
-            <a href="/abc">{more}</a>
+            <a href="#/abc">{more}</a>
         </HeaderWrapper>
     )
 })

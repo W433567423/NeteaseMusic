@@ -6,6 +6,7 @@ import TUNewAlbum from "@/pages/discover/c-pages/recommend/c-cpns/new-album";
 import TURankingList from "@/pages/discover/c-pages/recommend/c-cpns/ranking-list";
 import TUUserLogin from "@/pages/discover/c-pages/recommend/c-cpns/user-login";
 import TUSettleSinger from "@/pages/discover/c-pages/recommend/c-cpns/settle-singer";
+import TUHotRadio from "@/pages/discover/c-pages/recommend/c-cpns/hot-redio";
 
 const TURecommend = memo(() => {
     return (
@@ -20,6 +21,7 @@ const TURecommend = memo(() => {
                 <RecommendRight>
                     <TUUserLogin/>
                     <TUSettleSinger/>
+                    <TUHotRadio/>
                 </RecommendRight>
             </Content>
         </RecommendWraper>
