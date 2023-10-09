@@ -33,6 +33,13 @@ export const AlbumWrapper = styled.div<IAlbumWrapperType>`
   .album-info {
     font-size: 12px;
     width: ${props => props.size};
+    cursor: pointer;
+
+    .name, .artist {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 
     .name {
       color: #000;

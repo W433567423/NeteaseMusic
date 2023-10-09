@@ -23,11 +23,13 @@ const TUAlbumCover = memo((props: IPropsType) => {
         <AlbumWrapper size={size} width={width} bgp={bgp}>
             <div className="album-image">
                 <img src={getSizeImage(info.picUrl || '', 150)} alt=""/>
-                <a href="/abc" className="cover sprite_covor">{info.name}</a>
+                <a href={`https://music.163.com/#/album?id=${info.id}`} className="cover sprite_covor">{info.name}</a>
             </div>
             <div className="album-info">
-                <div className="name">{info.name}</div>
-                <div className="artist">{info.artist.name}</div>
+                <div className="name"
+                     onClick={() => window.location.href = `https://music.163.com/#/album?id=${info.id}`}>{info.name}</div>
+                <div className="artist"
+                     onClick={() => window.location.href = `https://music.163.com/#/artist?id=${info.artist.id}`}>{info.artist.name}</div>
             </div>
         </AlbumWrapper>
     )

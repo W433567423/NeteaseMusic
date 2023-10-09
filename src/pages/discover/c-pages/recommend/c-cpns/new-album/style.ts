@@ -12,9 +12,10 @@ export const AlbumWrapper = styled.div`
     align-items: center;
 
     .arrow {
-      width: 30px;
+      width: 17px;
       height: 17px;
       cursor: pointer;
+      margin: 0 5px;
     }
 
     .arrow-left {
