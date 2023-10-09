@@ -12,7 +12,6 @@ export const BannerWrapper = styled.div<IBannerWrapperType>`
 
   .banner {
     height: 270px;
-    background-color: red;
 
     display: flex;
     position: relative;

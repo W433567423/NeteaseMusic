@@ -5,8 +5,7 @@
  * @time: 2023/10/8 19:42
  */
 import {memo, useEffect, useRef} from 'react';
-import HYThemeHeaderRCM from '@cpn/theme-header-rcm';
-// import HYAlbumCover from "@/components/album-cover";
+import TUThemeHeaderRCM from '@cpn/theme-header-rcm';
 import {AlbumWrapper} from "./style";
 import {shallowEqual, useDispatch, useSelector} from "react-redux";
 import {getAlbum} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
@@ -31,7 +30,7 @@ const TUNewAlbum = memo(() => {
 
     return (
         <AlbumWrapper>
-            <HYThemeHeaderRCM title="新碟上架" moreLink="/discover/album"/>
+            <TUThemeHeaderRCM title="新碟上架" moreLink="/discover/album"/>
             <div className="content">
                 <div className="arrow arrow-left sprite_02"
                      onClick={() => carouselRef.current?.prev()}></div>

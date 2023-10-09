@@ -5,7 +5,7 @@
  * @time: 2023/10/8 19:45
  */
 import {memo, useEffect} from "react";
-import HYThemeHeaderRCM from "@cpn/theme-header-rcm";
+import TUThemeHeaderRCM from "@cpn/theme-header-rcm";
 import {RankingWrapper} from "@/pages/discover/c-pages/recommend/c-cpns/ranking-list/style.ts";
 import {shallowEqual, useDispatch, useSelector} from "react-redux";
 import {getTopData} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
@@ -19,7 +19,6 @@ const TURankingList = memo(() => { // redux
         topNewList: state.getIn(["recommend", "topNewList"]),
         topOriginList: state.getIn(["recommend", "topOriginList"])
     }), shallowEqual);
-    console.log(topUpList, topNewList, topOriginList)
 
     // hooks
     useEffect(() => {
@@ -30,7 +29,7 @@ const TURankingList = memo(() => { // redux
 
     return (
         <RankingWrapper>
-            <HYThemeHeaderRCM title="榜单" moreLink="/discover/ranking"/>
+            <TUThemeHeaderRCM title="榜单" moreLink="/discover/ranking"/>
             <div className="tops">
                 <TUTopRanking info={topUpList}/>
                 <TUTopRanking info={topNewList}/>
