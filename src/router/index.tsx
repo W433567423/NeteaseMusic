@@ -18,6 +18,9 @@ const TuRouter = () => {
             path: '/discover',
             element: <TuDiscover/>,
             children: [{
+                path: "/discover",
+                element: <Navigate to='/discover/recommend'/>
+            }, {
                 path: '/discover/recommend',
                 element: <TURecommend/>
             }, {

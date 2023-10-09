@@ -1,19 +1,22 @@
 import request from "./request";
 
 // 获取头部banner图片
-export function getTopBanner() {
+export const getTopBanner = () => {
     return request({
         url: "/banner"
     })
 }
 
-export function getHotRecommend() {
+// 获取热门推荐
+export const getHotRecommend = (limit?: number) => {
     return request({
-        url: "/personalized"
+        url: "/personalized", params: {
+            limit
+        }
     })
 }
 
-export function getNewAlbum(limit: number, offset: number) {
+export const getNewAlbum = (limit: number, offset: number) => {
     return request({
         url: "/album/new",
         params: {
@@ -23,7 +26,7 @@ export function getNewAlbum(limit: number, offset: number) {
     })
 }
 
-export function getTopList(id: number) {
+export const getTopList = (id: number) => {
     return request({
         url: "/playlist/detail",
         params: {
@@ -33,7 +36,7 @@ export function getTopList(id: number) {
 }
 
 
-export function getArtistList(limit: number, cat: number) {
+export const getArtistList = (limit: number, cat: number) => {
     return request({
         url: "/artist/list",
         params: {

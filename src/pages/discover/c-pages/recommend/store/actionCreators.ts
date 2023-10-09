@@ -2,11 +2,13 @@ import * as actionTypes from "./constants";
 
 import {getArtistList, getHotRecommend, getNewAlbum, getTopBanner, getTopList} from "@/services/recommend";
 
+// 改变redux中的topBanners数据
 const changeBannerAction = (res: any) => ({
     type: actionTypes.CHANGE_TOP_BNNAER,
     banners: res.banners
 })
 
+// 改变redux中的recommends数据
 const changeRecommendAction = (res: any) => ({
     type: actionTypes.CHANGE_HOT_RECOMMEND,
     recommends: res.result
@@ -47,9 +49,10 @@ export const getBannerAction = () => {
     }
 }
 
-export const getRecommend = () => {
+// 获取热门推荐数据
+export const getRecommend = (limit?: number) => {
     return (dispatch: (arg0: { type: string; recommends: any; }) => void) => {
-        getHotRecommend().then((res: any) => {
+        getHotRecommend(limit).then((res: any) => {
             dispatch(changeRecommendAction(res))
         })
     }
