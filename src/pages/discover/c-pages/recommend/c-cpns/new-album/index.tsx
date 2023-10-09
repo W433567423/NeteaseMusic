@@ -1,5 +1,5 @@
 /**
- * TODO
+ * DONE
  * @description: discover-新碟上映组件
  * @author: tutu
  * @time: 2023/10/8 19:42
@@ -14,6 +14,7 @@ import {Carousel} from "antd";
 import {CarouselRef} from "antd/es/carousel";
 import {INewAlbumType} from "./type.ts";
 import TUAlbumCover from "@cpn/album-cover";
+import {NEW_ALBUM_PAGE_NUM, NEW_ALBUM_PRE_NUM} from "@/common/constants.ts";
 
 const TUNewAlbum = memo(() => {
     // redux
@@ -25,7 +26,7 @@ const TUNewAlbum = memo(() => {
     // hooks
     const carouselRef = useRef<CarouselRef>(null);
     useEffect(() => {
-        dispatch(getAlbum() as any);
+        dispatch(getAlbum(NEW_ALBUM_PRE_NUM * NEW_ALBUM_PAGE_NUM) as any);
     }, [dispatch]);
 
     return (
@@ -37,11 +38,11 @@ const TUNewAlbum = memo(() => {
                 <div className="album">
                     <Carousel ref={carouselRef} dots={false}>
                         {
-                            [0, 1].map(item => {
+                            [...Array(NEW_ALBUM_PAGE_NUM).keys()].map(item => {
                                 return (
                                     <div key={item} className="page">
                                         {
-                                            newAlbum.slice(item * 5, (item + 1) * 5).map(item => {
+                                            newAlbum.slice(item * NEW_ALBUM_PRE_NUM, (item + 1) * NEW_ALBUM_PRE_NUM).map(item => {
                                                 return (
                                                     <TUAlbumCover key={item.id} info={item}/>
                                                 )

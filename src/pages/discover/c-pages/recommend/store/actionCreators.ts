@@ -14,6 +14,7 @@ const changeRecommendAction = (res: any) => ({
     recommends: res.result
 })
 
+// 改变redux中的newAlbum数据
 const changeNewAlbumAction = (res: any) => ({
     type: actionTypes.CHANGE_NEW_ALBUM,
     newAlbum: res.albums
@@ -58,9 +59,10 @@ export const getRecommend = (limit?: number) => {
     }
 }
 
-export const getAlbum = () => {
+//获取新碟上映数据
+export const getAlbum = (limit: number = 10, offset: number = 0) => {
     return (dispatch: (arg0: { type: string; newAlbum: any; }) => void) => {
-        getNewAlbum(10, 0).then((res: any) => dispatch(changeNewAlbumAction(res))
+        getNewAlbum(limit, offset).then((res: any) => dispatch(changeNewAlbumAction(res))
         )
     }
 }

@@ -3,9 +3,9 @@ import {Map} from "immutable";
 
 //Immutable类型优化性能
 const defaultState = Map({
-    topBanners: [],
-    hotRecommends: [],
-    newAlbum: [],
+    topBanners: [],//轮播图
+    hotRecommends: [],//热门推荐
+    newAlbum: [], //新碟上映
     topUpList: {},
     topNewList: {},
     topOriginList: {},
