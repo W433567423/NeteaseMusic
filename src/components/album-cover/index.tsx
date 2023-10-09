@@ -23,7 +23,7 @@ const TUAlbumCover = memo((props: IPropsType) => {
         <AlbumWrapper size={size} width={width} $bgp={bgp}>
             <div className="album-image">
                 <img src={getSizeImage(info.picUrl || '', 150)} alt=""/>
-                <a href={`https://music.163.com/#/album?id=${info.id}`} className="cover sprite_covor">{info.name}</a>
+                <a href={`#/album?id=${info.id}`} className="cover sprite_covor">{info.name}</a>
             </div>
             <div className="album-info">
                 <div className="name"

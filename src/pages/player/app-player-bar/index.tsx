@@ -63,13 +63,13 @@ const TUAppPlayerBar = memo(() => {
     useEffect(() => {
         // 暂停播放
         (audioRef.current as HTMLAudioElement).src = getPlayUrl(currentSong.id);
-        (audioRef.current as HTMLAudioElement).play().then(() => {
-            setIsPlaying(true);
-        }).catch(() => {
-            message.destroy()
-            message.error('该音频需要会员才可以播放').then();
-            setIsPlaying(false);
-        });
+        // (audioRef.current as HTMLAudioElement).play().then(() => {
+        //     setIsPlaying(true);
+        // }).catch(() => {
+        //     message.destroy()
+        //     message.error('该音频需要会员才可以播放').then();
+        //     setIsPlaying(false);
+        // });
         setDuration(currentSong.dt);
     }, [currentSong]);
 
@@ -77,10 +77,13 @@ const TUAppPlayerBar = memo(() => {
     const play = useCallback(() => {
         setIsPlaying(!isPlaying);
         isPlaying ? audioRef.current?.pause() : audioRef.current?.play().catch(() => {
+            message.destroy()
+            message.error('该音频需要会员才可以播放').then();
             setIsPlaying(false);
         });
     }, [isPlaying]);
 
+    // 播放时间更新
     const timeUpdate = (e: any) => {
         const currentTime = e.target.currentTime;
         if (!isChanging) {
@@ -108,6 +111,7 @@ const TUAppPlayerBar = memo(() => {
         }
     }
 
+    // 播放结束
     const timeEnded = () => {
         if (playSequence === 2 || playList.length === 1) {
             (audioRef.current as HTMLAudioElement).currentTime = 0;
