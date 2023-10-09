@@ -60,9 +60,8 @@ export const getRecommend = (limit?: number) => {
 
 export const getAlbum = () => {
     return (dispatch: (arg0: { type: string; newAlbum: any; }) => void) => {
-        getNewAlbum(10, 0).then((res: any) => {
-            dispatch(changeNewAlbumAction(res))
-        })
+        getNewAlbum(10, 0).then((res: any) => dispatch(changeNewAlbumAction(res))
+        )
     }
 }
 

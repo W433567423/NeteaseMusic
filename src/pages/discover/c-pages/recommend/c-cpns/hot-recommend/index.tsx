@@ -10,7 +10,7 @@ import TUThemeHeaderRCM from "@cpn/theme-header-rcm";
 import {useNavigate} from "react-router-dom";
 import {getRecommend} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 import {useDispatch, useSelector} from "react-redux";
-import {IHotRecommendType} from "@/services/type.ts";
+import {IHotRecommendType} from "./type.ts";
 import {HOT_RECOMMEND_LIMIT} from "@/common/constants.ts";
 import TUSongsCover from "@cpn/songs-cover";
 
@@ -38,7 +38,7 @@ const TUHotRecommend = memo(() => {
                               keywordClick={keywordClick}/>
             <div className="recommend-list">
                 {hotRecommends.map(item =>
-                    <TUSongsCover key={item.id} info={item}/>)}
+                    <TUSongsCover key={item.id} info={item} right={20}/>)}
             </div>
         </HotRecommendWrapper>
     )

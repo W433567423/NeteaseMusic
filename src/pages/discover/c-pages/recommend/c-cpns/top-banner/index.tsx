@@ -14,12 +14,12 @@ import {
 import {useDispatch, useSelector} from "react-redux";
 import {getBannerAction} from "@/pages/discover/c-pages/recommend/store/actionCreators.ts";
 import {Carousel} from "antd";
-import {ITopBannerType} from "@/services/type.ts";
+import {ITopBannerType} from "./type.ts";
 import {CarouselRef} from "antd/es/carousel";
 
 const TUTopBanner = memo(() => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    
+
     // redux hooks
     const {topBanners}: {
         topBanners: ITopBannerType[]

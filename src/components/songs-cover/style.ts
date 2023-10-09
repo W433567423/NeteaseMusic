@@ -6,7 +6,7 @@ interface IThemeCoverWrapper {
 
 export const ThemeCoverWrapper = styled.div<IThemeCoverWrapper>`
   width: 140px;
-  margin: 20px ${props => (props.right || 0)} 20px 0;
+  margin: 20px ${props => (props.right || 0)}px 20px 0;
 
   .cover-top {
     position: relative;
