@@ -12,19 +12,21 @@ import {getRecommend} from "@/pages/discover/c-pages/recommend/store/actionCreat
 import {useDispatch, useSelector} from "react-redux";
 import {IHotRecommendType} from "@/services/type.ts";
 import {HOT_RECOMMEND_LIMIT} from "@/common/constants.ts";
+import TUSongsCover from "@cpn/songs-cover";
 
 const TUHotRecommend = memo(() => {
+    // 路由跳转
     const navigate = useNavigate()
     const keywordClick = useCallback((keyword: string) => {
         navigate(`/discover/songs?${keyword}`);
     }, [navigate]);
-// redux hooks
+
+    // redux hooks
     const {hotRecommends}: {
         hotRecommends: IHotRecommendType[]
     } = useSelector((state: any) => ({hotRecommends: state.getIn(['recommend', 'hotRecommends'])}))
     const dispatch = useDispatch()
 
-    console.log(hotRecommends)
     useEffect(() => {
         // 获取轮播图数据
         dispatch(getRecommend(HOT_RECOMMEND_LIMIT) as any)
@@ -36,7 +38,7 @@ const TUHotRecommend = memo(() => {
                               keywordClick={keywordClick}/>
             <div className="recommend-list">
                 {hotRecommends.map(item =>
-                    (<div><p>{item.name}</p></div>))}
+                    <TUSongsCover key={item.id} info={item}/>)}
             </div>
         </HotRecommendWrapper>
     )

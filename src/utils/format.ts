@@ -2,6 +2,7 @@ export function getSizeImage(imgUrl: string, size: number) {
     return `${imgUrl}?param=${size}x${size}`;
 }
 
+// 将播放量转换为带单位
 export function getCount(count: number) {
     if (count < 0) return;
     if (count < 10000) {

@@ -23,6 +23,7 @@ export const ThemeCoverWrapper = styled.div<IThemeCoverWrapper>`
       width: 100%;
       height: 100%;
       background-position: 0 0;
+      cursor: pointer;
 
       .info {
         display: flex;
@@ -36,6 +37,7 @@ export const ThemeCoverWrapper = styled.div<IThemeCoverWrapper>`
         background-position: 0 -537px;
         color: #ccc;
         height: 27px;
+        cursor: default;
 
         .erji {
           margin-right: 5px;
@@ -50,6 +52,10 @@ export const ThemeCoverWrapper = styled.div<IThemeCoverWrapper>`
           width: 16px;
           height: 17px;
           background-position: 0 0;
+          cursor: pointer;
+
+          color: #fff;
+          
         }
       }
     }
@@ -59,6 +65,7 @@ export const ThemeCoverWrapper = styled.div<IThemeCoverWrapper>`
     font-size: 14px;
     color: #000;
     margin-top: 5px;
+    cursor: pointer;
   }
 
   .cover-source {

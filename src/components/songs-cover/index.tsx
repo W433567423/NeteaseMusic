@@ -13,7 +13,7 @@ interface IPropsType {
     info: any
 }
 
-const TUThemeCover = memo((props: IPropsType) => {
+const TUSongsCover = memo((props: IPropsType) => {
     const {info, right} = props;
     return (
         <ThemeCoverWrapper right={right}>
@@ -21,22 +21,26 @@ const TUThemeCover = memo((props: IPropsType) => {
                 <img src={getSizeImage(info.picUrl || info.coverImgUrl, 140)} alt=""/>
                 <div className="cover sprite_covor">
                     <div className="info sprite_covor">
-            <span>
-              <i className="sprite_icon erji"></i>
-                {getCount(info.playCount)}
-            </span>
+                    <span>
+                      <i className="sprite_icon erji"></i>
+                        {getCount(info.playCount)}
+                    </span>
                         <i className="sprite_icon play"></i>
                     </div>
                 </div>
             </div>
-            <div className="cover-bottom text-nowrap">
+            <div className="cover-bottom">
                 {info.name}
             </div>
-            {/* <div className="cover-source">
-        by {info.copywriter || info.creator.nickname}
-      </div> */}
+            {/*单行？*/}
+            {/*<div className="cover-bottom text-nowrap">*/}
+            {/*    {info.name}*/}
+            {/*</div>*/}
+            {/*<div className="cover-source">*/}
+            {/*    by {info.copywriter || info.creator.nickname}*/}
+            {/*</div>*/}
         </ThemeCoverWrapper>
     )
 })
 
-export default TUThemeCover
+export default TUSongsCover
