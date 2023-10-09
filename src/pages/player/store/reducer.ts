@@ -138,7 +138,8 @@ const defaultState = Map({
             "mst": 9,
             "cp": 14026,
             "publishTime": 1461723397683
-        }, {
+        },
+        {
             "name": "嚣张",
             "id": 1382596189,
             "pst": 0,

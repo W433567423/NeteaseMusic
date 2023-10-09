@@ -3,7 +3,7 @@ import styled from 'styled-components';
 interface IAlbumWrapperType {
     width: string
     size: string
-    bgp: string
+    $bgp: string
 }
 
 export const AlbumWrapper = styled.div<IAlbumWrapperType>`
@@ -25,7 +25,7 @@ export const AlbumWrapper = styled.div<IAlbumWrapperType>`
       right: 0;
       top: 0;
       bottom: 0;
-      background-position: 0 ${props => props.bgp};
+      background-position: 0 ${props => props.$bgp};
       text-indent: -9999px;
     }
   }

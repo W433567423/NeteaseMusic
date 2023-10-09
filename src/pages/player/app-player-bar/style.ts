@@ -3,11 +3,11 @@ import progressBarImg from '@/assets/img/progress_bar.png'
 import spriteIconImg from '@/assets/img/sprite_icon.png'
 
 interface IControlType {
-    isPlaying: boolean
+    $isPlaying: boolean
 }
 
 interface IOperatorType {
-    sequence: number
+    $sequence: number
 }
 
 export const PlayBarWrapper = styled.div`
@@ -51,7 +51,7 @@ export const Control = styled.div<IControlType>`
     width: 36px;
     height: 36px;
     margin: 0 8px;
-    background-position: 0 ${props => props.isPlaying ? "-165px" : "-204px"};
+    background-position: 0 ${props => props.$isPlaying ? "-165px" : "-204px"};
     cursor: pointer;
   }
 
@@ -142,6 +142,7 @@ export const Operator = styled.div<IOperatorType>`
   .btn {
     width: 25px;
     height: 25px;
+    cursor: pointer;
   }
 
   .favor {
@@ -169,7 +170,7 @@ export const Operator = styled.div<IOperatorType>`
 
     .loop {
       background-position: ${props => {
-        switch (props.sequence) {
+        switch (props.$sequence) {
           case 1:
             return "-66px -248px";
           case 2:

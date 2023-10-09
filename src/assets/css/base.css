@@ -77,7 +77,7 @@ body, textarea, select, input, button {
 }
 
 
-.ant-message .ant-message-notice-content {
+.lyric-message .ant-message .ant-message-notice-content {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);

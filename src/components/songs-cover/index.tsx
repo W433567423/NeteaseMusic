@@ -18,7 +18,7 @@ const TUSongsCover = memo((props: IPropsType) => {
     const {info, right} = props;
 
     return (
-        <ThemeCoverWrapper right={right}>
+        <ThemeCoverWrapper $right={right + 'px'}>
             <div className="cover-top"
                  onClick={() => window.location.href = 'todo'}>
                 <img src={getSizeImage(info.picUrl || info.coverImgUrl || '', 140)} alt=""/>

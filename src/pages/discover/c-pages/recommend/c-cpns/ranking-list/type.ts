@@ -1,4 +1,6 @@
 // 作者详情
+import {IBfsvTpye} from "@/common/type.ts";
+
 interface IAvatarDetailType {
     userType: number,
     identityLevel: number,
@@ -90,12 +92,6 @@ interface ITrackIdType {
     v: number
 }
 
-interface IBfsvTpye {
-    br: number
-    fid: number
-    size: number
-    vd: number
-}
 
 interface IAlTpye {
     id: number
@@ -213,4 +209,4 @@ interface ITopListType {
 }
 
 
-export type {ITopListType,}
+export type {IBfsvTpye, ITopListType,}

@@ -9,16 +9,19 @@ import {Control, Operator, PlayBarWrapper, PlayInfo} from "./style.ts";
 import {NavLink} from "react-router-dom";
 import {message, Slider} from "antd";
 import {shallowEqual, useDispatch, useSelector} from "react-redux";
-import {getPlayUrl} from "@/utils/format.ts";
 import dayjs from "dayjs";
-import {getSongDetailAction} from "@/pages/player/store";
 import {
     changeCurrentLyricIndexAction,
     changePlaySequenceAction,
-    changePlaySongAction
+    changePlaySongAction,
+    getSongDetailAction
 } from "@/pages/player/store/actionCreators.ts";
+import {ILyricsType, ISongType} from "@/pages/player/app-player-bar/type.ts";
+import {getPlayUrl} from "@/utils/format.ts";
+import {SONG_ID_TEST} from "@/common/constants.ts";
 
 const TUAppPlayerBar = memo(() => {
+
     // props and state
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0);
@@ -34,6 +37,12 @@ const TUAppPlayerBar = memo(() => {
         currentLyricIndex,
         playList,
         playSequence
+    }: {
+        currentSong: ISongType,
+        currentLyrics: ILyricsType[],
+        currentLyricIndex: number,
+        playList: ISongType[],
+        playSequence: number
     } = useSelector((state: any) => ({
         currentSong: state.getIn(["player", "currentSong"]),
         currentLyrics: state.getIn(["player", "currentLyrics"]),
@@ -41,25 +50,24 @@ const TUAppPlayerBar = memo(() => {
         playList: state.getIn(["player", "playList"]),
         playSequence: state.getIn(["player", "playSequence"])
     }), shallowEqual);
-
-    console.log(currentSong,
-        currentLyrics,
-        currentLyricIndex,
-        playList,
-        playSequence)
     const dispatch = useDispatch();
+
 
     // other hooks
     const audioRef = useRef<HTMLAudioElement>(null);
     useEffect(() => {
-        dispatch(getSongDetailAction(167876) as any);
+        // 测试歌曲
+        dispatch(getSongDetailAction(SONG_ID_TEST) as any);
     }, [dispatch]);
 
     useEffect(() => {
+        // 暂停播放
         (audioRef.current as HTMLAudioElement).src = getPlayUrl(currentSong.id);
         (audioRef.current as HTMLAudioElement).play().then(() => {
             setIsPlaying(true);
         }).catch(() => {
+            message.destroy()
+            message.error('该音频需要会员才可以播放').then();
             setIsPlaying(false);
         });
         setDuration(currentSong.dt);
@@ -130,13 +138,15 @@ const TUAppPlayerBar = memo(() => {
     return (
         <PlayBarWrapper className="sprite_play_bar">
             <div className="content wrap-v2">
-                <Control isPlaying={isPlaying}>
+                {/*左侧播放控件*/}
+                <Control $isPlaying={isPlaying}>
                     <button className="sprite_play_bar btn prev"
                             onClick={() => dispatch(changePlaySongAction(-1) as any)}></button>
                     <button className="sprite_play_bar btn play" onClick={() => play()}></button>
                     <button className="sprite_play_bar btn next"
                             onClick={() => dispatch(changePlaySongAction(1) as any)}></button>
                 </Control>
+                {/*进度条控件*/}
                 <PlayInfo>
                     <div className="image">
                         <NavLink to="/discover/player">
@@ -153,14 +163,15 @@ const TUAppPlayerBar = memo(() => {
                         <div className="progress">
                             <Slider value={progress} onChange={sliderChange} onAfterChange={sliderAfterChange}/>
                             <div className="time">
-                                <span className="now-time">{dayjs(currentTime * 1000).format('mm/ss')}</span>
+                                <span className="now-time">{dayjs(currentTime * 1000).format('mm:ss')}</span>
                                 <span className="divider">/</span>
-                                <span className="total-time">{dayjs(duration).format('mm/ss')}</span>
+                                <span className="total-time">{dayjs(duration).format('mm:ss')}</span>
                             </div>
                         </div>
                     </div>
                 </PlayInfo>
-                <Operator sequence={playSequence}>
+                {/*右侧调试*/}
+                <Operator $sequence={playSequence}>
                     <div className="left">
                         <button className="sprite_play_bar btn favor"></button>
                         <button className="sprite_play_bar btn share"></button>

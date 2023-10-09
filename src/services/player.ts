@@ -1,11 +1,12 @@
 import request from './request';
 
-export function getSongDetail(ids: number) {
+export function getSongDetail(ids: number, cookie?: string) {
     return request({
         url: "/song/detail",
         params: {
-            ids
+            ids, cookie: cookie && encodeURIComponent(cookie)
         }
+
     })
 }
 

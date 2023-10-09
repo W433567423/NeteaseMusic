@@ -1,3 +1,11 @@
+interface IBfsvTpye {
+    br: number
+    fid: number
+    size: number
+    vd: number
+}
+
+
 interface ILocalRelation {
     title: string
     link: string
@@ -14,4 +22,4 @@ interface IHotRadio {
     url: string
 }
 
-export type {ILocalRelation, ILocalFooterImg, IHotRadio}
+export type {IBfsvTpye, ILocalRelation, ILocalFooterImg, IHotRadio}

@@ -6,7 +6,7 @@ const request = (option: any) => {
         // 1.创建axios的实例
         const instance = originAxios.create({
             baseURL: BASE_URL,
-            timeout: 10000
+            timeout: 10000,
         });
 
         // 配置请求和响应拦截
