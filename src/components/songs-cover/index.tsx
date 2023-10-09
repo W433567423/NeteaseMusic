@@ -7,18 +7,21 @@
 import {memo} from "react";
 import {ThemeCoverWrapper} from "@cpn/songs-cover/style.ts";
 import {getCount, getSizeImage} from "@/utils/format";
+import {IImgCoverType} from "@cpn/songs-cover/type.ts";
 
 interface IPropsType {
     right?: number
-    info: any
+    info: IImgCoverType
 }
 
 const TUSongsCover = memo((props: IPropsType) => {
     const {info, right} = props;
+
     return (
         <ThemeCoverWrapper right={right}>
-            <div className="cover-top">
-                <img src={getSizeImage(info.picUrl || info.coverImgUrl, 140)} alt=""/>
+            <div className="cover-top"
+                 onClick={() => window.location.href = `https://music.163.com/#/playlist?id=${info.id}`}>
+                <img src={getSizeImage(info.picUrl || info.coverImgUrl || '', 140)} alt=""/>
                 <div className="cover sprite_covor">
                     <div className="info sprite_covor">
                     <span>

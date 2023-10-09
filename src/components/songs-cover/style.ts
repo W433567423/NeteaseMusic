@@ -55,7 +55,7 @@ export const ThemeCoverWrapper = styled.div<IThemeCoverWrapper>`
           cursor: pointer;
 
           color: #fff;
-          
+
         }
       }
     }
@@ -66,6 +66,10 @@ export const ThemeCoverWrapper = styled.div<IThemeCoverWrapper>`
     color: #000;
     margin-top: 5px;
     cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .cover-source {
