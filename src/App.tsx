@@ -6,6 +6,7 @@ import TuRouter from "@/router";
 import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "@/store";
+import TUAppPlayerBar from "@/pages/player/app-player-bar";
 
 const App = memo(() => {
     return (
@@ -14,7 +15,9 @@ const App = memo(() => {
                 <TuAppHeader/>
                 <TuRouter/>
                 <TuAppFooter/>
-            </HashRouter></Provider>
+                <TUAppPlayerBar/>
+            </HashRouter>
+        </Provider>
     )
 })
 

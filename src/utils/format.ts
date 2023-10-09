@@ -15,6 +15,7 @@ export function getCount(count: number) {
     }
 }
 
+// 通过id拿到音频链接
 export function getPlayUrl(id: number) {
     return `https://music.163.com/song/media/outer/url?id=${id}.mp3`
 }
