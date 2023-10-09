@@ -18,7 +18,7 @@ const TUHotRecommend = memo(() => {
     // 路由跳转
     const navigate = useNavigate()
     const keywordClick = useCallback((keyword: string) => {
-        navigate(`/discover/songs?${keyword}`);
+        navigate(`/discover/songs?keyword=${keyword}`);
     }, [navigate]);
 
     // redux hooks
