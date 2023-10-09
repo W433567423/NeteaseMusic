@@ -34,7 +34,7 @@ const TUHotRecommend = memo(() => {
             <TUThemeHeaderRCM title='热门推荐' moreLink="/discover/songs"
                               keywords={['华语', '流行', '摇滚', '民谣', '电子']}
                               keywordClick={keywordClick}/>
-            <div>
+            <div className="recommend-list">
                 {hotRecommends.map(item =>
                     (<div><p>{item.name}</p></div>))}
             </div>

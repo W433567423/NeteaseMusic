@@ -9,14 +9,14 @@ import {memo} from 'react';
 import {HeaderWrapper} from "./style";
 import {Link} from "react-router-dom";
 
-interface ITUThemeHeaderRCMType {
+interface IThemeHeaderRCMType {
     keywords?: string[]
     title: string,
     moreLink: string
     keywordClick?: (a: string) => void
 }
 
-const TUThemeHeaderRCM = memo((props: ITUThemeHeaderRCMType) => {
+const TUThemeHeaderRCM = memo((props: IThemeHeaderRCMType) => {
     const {title, keywords, moreLink, keywordClick} = props;
 
     return (
