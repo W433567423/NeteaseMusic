@@ -52,8 +52,6 @@ const TUAppPlayerBar = memo(() => {
     }), shallowEqual);
     const dispatch = useDispatch();
 
-
-    // other hooks
     const audioRef = useRef<HTMLAudioElement>(null);
     useEffect(() => {
         // 测试歌曲
@@ -61,7 +59,6 @@ const TUAppPlayerBar = memo(() => {
     }, [dispatch]);
 
     useEffect(() => {
-        // 暂停播放
         (audioRef.current as HTMLAudioElement).src = getPlayUrl(currentSong.id);
         // (audioRef.current as HTMLAudioElement).play().then(() => {
         //     setIsPlaying(true);
@@ -73,7 +70,7 @@ const TUAppPlayerBar = memo(() => {
         setDuration(currentSong.dt);
     }, [currentSong]);
 
-    // 其他业务
+    // 播放/暂停函数
     const play = useCallback(() => {
         setIsPlaying(!isPlaying);
         isPlaying ? audioRef.current?.pause() : audioRef.current?.play().catch(() => {
