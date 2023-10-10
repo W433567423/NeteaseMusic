@@ -3,6 +3,6 @@
     top: 75vh;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .5) !important;
     color: #fff;
 }
