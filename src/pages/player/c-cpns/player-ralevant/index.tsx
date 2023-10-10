@@ -17,8 +17,6 @@ const TUPlayerRelevant = memo(() => {
     }), shallowEqual);
     const dispatch = useDispatch();
 
-    console.log(simiSongs)
-
     useEffect(() => {
         dispatch(getSimiSongAction() as any);
     }, [dispatch]);

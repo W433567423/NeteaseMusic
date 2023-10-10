@@ -1,7 +1,8 @@
-import {memo, useEffect} from "react";
+import {memo, Suspense, useEffect} from "react";
 import {DiscoverWrapper, TopMenu} from "@/pages/discover/style.ts";
 import {discoverMenu} from "@/common/local-data.ts";
 import {NavLink, Outlet} from "react-router-dom";
+import {Spin} from "antd";
 
 
 const TuDiscover = memo(() => {
@@ -27,7 +28,10 @@ const TuDiscover = memo(() => {
                 </TopMenu>
             </div>
             {/*子路由对应位置*/}
-            <Outlet/>
+            <Suspense fallback={<Spin/>}>
+                <Outlet/>
+            </Suspense>
+
         </DiscoverWrapper>
     )
 })
