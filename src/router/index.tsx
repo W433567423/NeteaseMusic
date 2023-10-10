@@ -1,14 +1,21 @@
-import TuDiscover from "@/pages/discover";
-import TuFriend from "@/pages/friend";
-import TuMine from "@/pages/mine";
+import {lazy} from "react";
 import {Navigate, useRoutes} from "react-router-dom";
+
+import TuDiscover from "@/pages/discover";
 import TURecommend from "@/pages/discover/c-pages/recommend";
-import TURanking from "@/pages/discover/c-pages/ranking";
-import TUSongs from "@/pages/discover/c-pages/songs";
-import TUDjRadio from "@/pages/discover/c-pages/djradio";
-import TUArtist from "@/pages/discover/c-pages/artist";
-import TUAlbum from "@/pages/discover/c-pages/album";
-import TUPlayer from '@/pages/player'
+
+// 懒加载
+const TuFriend = lazy(() => import( "@/pages/friend"))
+const TuMine = lazy(() => import( "@/pages/mine"))
+const TURanking = lazy(() => import( "@/pages/discover/c-pages/ranking"))
+const TUSongs = lazy(() => import( "@/pages/discover/c-pages/songs"))
+const TUDjRadio = lazy(() => import( "@/pages/discover/c-pages/djradio"))
+const TUArtist = lazy(() => import( "@/pages/discover/c-pages/artist"))
+const TUAlbum = lazy(() => import( "@/pages/discover/c-pages/album"))
+const TUPlayer = lazy(() => import( '@/pages/player'))
+
+// const TURecommend = lazy(() => import  ("@/pages/discover/c-pages/recommend"))
+// const TURecommend = lazy(() => import  ("@/pages/discover/c-pages/recommend"))
 
 const TuRouter = () => {
     return useRoutes(
