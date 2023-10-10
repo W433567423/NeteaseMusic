@@ -18,7 +18,7 @@ const TUHotRadio = memo(() => {
                     hotRadios.map((item) => {
                         return (
                             <div className="item" key={item.picUrl}>
-                                <a href="#/abc" className="image">
+                                <a href="#/todo" className="image">
                                     <img src={item.picUrl} alt=""/>
                                 </a>
                                 <div className="info">

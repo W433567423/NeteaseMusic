@@ -42,7 +42,7 @@ const TUSettleSinger = memo(() => {
                 }
             </div>
             <div className="apply-for">
-                <a href="#/abc">申请成为网易音乐人</a>
+                <a href="#/todo">申请成为网易音乐人</a>
             </div>
         </SetterSongerWrapper>
     )

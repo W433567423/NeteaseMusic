@@ -16,11 +16,15 @@ const TUPlayer = memo(() => {
         <PlayerWrapper>
             <div className="content wrap-v2">
                 <PlayerLeft>
+                    {/*歌曲歌词*/}
                     <TUPlayerInfo/>
+                    {/*TODO 评论*/}
                     <TUPlayerComment/>
                 </PlayerLeft>
                 <PlayerRight>
+                    {/*包含歌单*/}
                     <TUPlayerSongs/>
+                    {/*相似歌曲*/}
                     <TUPlayerRelevant/>
                 </PlayerRight>
             </div>

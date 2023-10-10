@@ -17,7 +17,7 @@ const TUThemeHeaderSmall = memo((props: IPropsType) => {
     return (
         <HeaderWrapper>
             <h3>{title}</h3>
-            <a href="#/abc">{more}</a>
+            <a href="#/todo">{more}</a>
         </HeaderWrapper>
     )
 })
