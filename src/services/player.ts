@@ -19,11 +19,11 @@ export function getLyric(id: number) {
     })
 }
 
-export function getSimiPlaylist(id: number) {
+export function getSimiPlaylist(id: number, timestamp?: number) {
     return request({
         url: "/simi/playlist",
         params: {
-            id
+            id, timestamp
         }
     })
 }

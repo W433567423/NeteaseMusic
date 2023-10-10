@@ -1,0 +1,8 @@
+.lyric-message .ant-message-notice-content {
+    position: fixed;
+    top: 75vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+}

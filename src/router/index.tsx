@@ -8,6 +8,7 @@ import TUSongs from "@/pages/discover/c-pages/songs";
 import TUDjRadio from "@/pages/discover/c-pages/djradio";
 import TUArtist from "@/pages/discover/c-pages/artist";
 import TUAlbum from "@/pages/discover/c-pages/album";
+import TUPlayer from '@/pages/player'
 
 const TuRouter = () => {
     return useRoutes(
@@ -38,6 +39,9 @@ const TuRouter = () => {
             }, {
                 path: '/discover/album',
                 element: <TUAlbum/>
+            }, {
+                path: '/discover/player',
+                element: <TUPlayer/>
             }]
         }, {
             path: '/mine',

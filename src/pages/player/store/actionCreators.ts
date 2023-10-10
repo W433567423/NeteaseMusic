@@ -111,12 +111,12 @@ export const getSongDetailAction = (ids: number) => {
     }
 }
 
-export const getSimiPlaylistAction = () => {
+export const getSimiPlaylistAction = (timestamp?: number) => {
     return (dispatch: any, getState: any) => {
         const id = getState().getIn(["player", "currentSong"]).id;
         if (!id) return;
 
-        getSimiPlaylist(id).then(res => {
+        getSimiPlaylist(id, timestamp).then(res => {
             dispatch(changeSimiPlaylistAction(res));
         })
     }

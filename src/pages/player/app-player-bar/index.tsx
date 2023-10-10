@@ -99,6 +99,7 @@ const TUAppPlayerBar = memo(() => {
         const finalIndex = i - 1;
         if (finalIndex !== currentLyricIndex) {
             dispatch(changeCurrentLyricIndexAction(finalIndex));
+            message.destroy('lyric')
             message.open({
                 content: currentLyrics[finalIndex].content,
                 key: "lyric",
@@ -189,7 +190,7 @@ const TUAppPlayerBar = memo(() => {
                 </Operator>
             </div>
             <audio ref={audioRef} onTimeUpdate={timeUpdate} onEnded={timeEnded}/>
-            {/*{showPanel && <TUAppPlayPanel/>}*/}
+            {/*{showPanel && <TUP/>}*/}
         </PlayBarWrapper>
     )
 })
