@@ -20,7 +20,7 @@ interface IArtistType {
 interface INewAlbumType {
     alias: string[]
     artist: IArtistType
-    artists: any[]
+    artists: IArtistType[]
     awardTags: null
     blurPicUrl: string
     briefDesc: string

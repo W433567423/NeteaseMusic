@@ -1,6 +1,6 @@
 /**
  * DONE
- * @description: 默认组件
+ * @description:播放页面
  * @author: tutu
  * @time: 2023/10/10 10:04
  */
@@ -9,6 +9,7 @@ import {PlayerLeft, PlayerRight, PlayerWrapper} from "./style.ts";
 import TUPlayerInfo from "./c-cpns/player-info";
 import TUPlayerComment from "./c-cpns/player-comment";
 import TUPlayerSongs from "./c-cpns/player-songs";
+import TUPlayerRelevant from "@/pages/player/c-cpns/player-ralevant";
 
 const TUPlayer = memo(() => {
     return (
@@ -20,7 +21,7 @@ const TUPlayer = memo(() => {
                 </PlayerLeft>
                 <PlayerRight>
                     <TUPlayerSongs/>
-                    {/*<TUPlayerRelevant/>*/}
+                    <TUPlayerRelevant/>
                 </PlayerRight>
             </div>
         </PlayerWrapper>

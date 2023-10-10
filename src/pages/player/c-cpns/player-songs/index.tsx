@@ -19,7 +19,6 @@ const TUPlayerSongs = memo(() => {
         simiPlaylist: state.getIn(["player", "simiPlaylist"])
     }), shallowEqual);
     const dispatch = useDispatch();
-    console.log(simiPlaylist)
 
     // other hooks
     useEffect(() => {
