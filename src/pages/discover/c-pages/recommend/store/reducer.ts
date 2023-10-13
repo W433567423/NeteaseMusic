@@ -1,8 +1,8 @@
 import * as actionTypes from './constants';
-import immutable from "immutable";
+import {Map} from "immutable";
 
 //Immutable类型优化性能
-const defaultState = immutable.Map({
+const defaultState = Map({
     topBanners: [],// 轮播图
     hotRecommends: [],// 热门推荐
     newAlbum: [], // 新碟上映
