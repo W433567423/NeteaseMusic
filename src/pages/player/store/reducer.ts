@@ -1,8 +1,8 @@
-import {Map} from 'immutable';
+import immutable from 'immutable';
 
 import * as actionTypes from './constants';
 
-const defaultState = Map({
+const defaultState = immutable.Map({
     playList: [
         {
             "name": "有何不可",
