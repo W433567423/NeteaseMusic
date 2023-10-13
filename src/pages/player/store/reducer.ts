@@ -1,6 +1,6 @@
+import * as actionTypes from './constants';
 import {Map} from 'immutable';
 
-import * as actionTypes from './constants';
 
 const defaultState = Map({
     playList: [
