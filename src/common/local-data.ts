@@ -15,15 +15,15 @@ export const headerLinks: ILocalRelation[] = [
     },
     {
         title: "商城",
-        link: "https://music.163.com/store/product"
+        link: "//music.163.com/store/product"
     },
     {
         title: "音乐人",
-        link: "https://music.163.com/nmusician/web/index#/"
+        link: "//music.163.com/nmusician/web/index#/"
     },
     {
         title: "下载客户端",
-        link: "https://music.163.com/#/download"
+        link: "//music.163.com/#/download"
     }
 ]
 
@@ -31,19 +31,19 @@ export const headerLinks: ILocalRelation[] = [
 export const footerLinks: ILocalRelation[] = [
     {
         title: "服务条款",
-        link: "https://st.music.163.com/official-terms/service"
+        link: "//st.music.163.com/official-terms/service"
     },
     {
         title: "隐私政策",
-        link: "https://st.music.163.com/official-terms/privacy"
+        link: "//st.music.163.com/official-terms/privacy"
     },
     {
         title: "儿童隐私政策",
-        link: "https://st.music.163.com/official-terms/children"
+        link: "//st.music.163.com/official-terms/children"
     },
     {
         title: "版权投诉指引",
-        link: "https://music.163.com/st/staticdeal/complaints.html"
+        link: "//music.163.com/st/staticdeal/complaints.html"
     },
     {
         title: "意见反馈",
@@ -53,16 +53,16 @@ export const footerLinks: ILocalRelation[] = [
 
 export const footerImages: ILocalFooterImg[] = [
     {
-        link: "https://music.163.com/st/userbasic#/auth"
+        link: "//music.163.com/st/userbasic#/auth"
     },
     {
-        link: "https://music.163.com/recruit"
+        link: "//music.163.com/recruit"
     },
     {
-        link: "https://music.163.com/web/reward"
+        link: "//music.163.com/web/reward"
     },
     {
-        link: "https://music.163.com/uservideo#/plan"
+        link: "//music.163.com/uservideo#/plan"
     }
 ]
 
