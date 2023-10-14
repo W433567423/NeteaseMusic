@@ -1,6 +1,6 @@
 /**
- * TODO
- * @description: 默认组件
+ * DONE
+ * @description: 播放面板头部
  * @author: tutu
  * @time: 2023/10/14 11:52
  */
