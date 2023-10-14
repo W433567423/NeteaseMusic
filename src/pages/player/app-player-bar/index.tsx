@@ -98,7 +98,7 @@ const TUAppPlayerBar = memo(() => {
             }
         }
         const finalIndex = i - 1;
-        if (finalIndex !== currentLyricIndex) {
+        if (finalIndex !== currentLyricIndex && !showPanel) {
             dispatch(changeCurrentLyricIndexAction(finalIndex));
             message.destroy('lyric')
             message.open({
@@ -137,6 +137,12 @@ const TUAppPlayerBar = memo(() => {
             play();
         }
     }, [duration, isPlaying, play]);
+
+    const openPanel = () => {
+        if (!showPanel)
+            message.destroy('lyric')
+        setShowPanel(!showPanel)
+    }
 
     return (
         <PlayBarWrapper className="sprite_play_bar">
@@ -184,7 +190,7 @@ const TUAppPlayerBar = memo(() => {
                         <button className="sprite_play_bar btn loop"
                                 onClick={() => dispatch(changePlaySequenceAction(playSequence + 1))}></button>
                         <button className="sprite_play_bar btn playlist"
-                                onClick={() => setShowPanel(!showPanel)}>
+                                onClick={() => openPanel()}>
                             {playList.length}
                         </button>
                     </div>
