@@ -19,6 +19,7 @@ import {
 import {ILyricsType, ISongType} from "@/pages/player/app-player-bar/type.ts";
 import {getPlayUrl} from "@/utils/format.ts";
 import {SONG_ID_TEST} from "@/common/constants.ts";
+import TUAppPlayList from "@/pages/player/app-player-panel";
 
 const TUAppPlayerBar = memo(() => {
 
@@ -190,7 +191,7 @@ const TUAppPlayerBar = memo(() => {
                 </Operator>
             </div>
             <audio ref={audioRef} onTimeUpdate={timeUpdate} onEnded={timeEnded}/>
-            {/*{showPanel && <TUP/>}*/}
+            {showPanel && <TUAppPlayList/>}
         </PlayBarWrapper>
     )
 })
